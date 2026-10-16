@@ -1,0 +1,44 @@
+.footer {
+  background: #1a1a2e;
+  color: #fff3e0;
+  font-family: "Poppins", system-ui, sans-serif;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 1.5rem;
+}
+
+.footer-logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.f-film {
+  color: #e91e63;
+}
+
+.f-adda {
+  color: #ff9800;
+}
+
+.footer-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 243, 224, 0.12);
+}
+
+.footer-bottom p {
+  margin: 0;
+  padding: 0.9rem 1.25rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
