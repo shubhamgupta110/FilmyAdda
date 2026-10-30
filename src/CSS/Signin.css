@@ -1,0 +1,317 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-page {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+
+    background:
+        linear-gradient(rgba(5, 5, 12, 0.82), rgba(5, 5, 12, 0.94)),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1920&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main Sign In Card */
+.signin-card {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    padding: 35px 30px;
+
+    border: 1px solid rgba(255, 215, 120, 0.55);
+    border-radius: 18px;
+
+    color: #fff;
+
+    background: linear-gradient(
+        145deg,
+        rgba(35, 29, 30, 0.96),
+        rgba(10, 10, 18, 0.97)
+    );
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.65),
+        0 0 25px rgba(233, 30, 99, 0.12);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signin-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.75),
+        0 0 25px rgba(233, 30, 99, 0.2);
+}
+
+/* Heading */
+.signin-card h2 {
+    margin: -35px -30px 0;
+    padding: 25px 15px;
+
+    text-align: center;
+
+    color: #ffe6a6;
+
+    background: linear-gradient(
+        120deg,
+        #991b35,
+        #e91e63,
+        #a31335
+    );
+
+    border-bottom: 2px solid #e9bd59;
+
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    text-shadow: 0 2px 10px rgba(255, 220, 120, 0.3);
+}
+
+/* Subtitle */
+.signin-subtitle {
+    text-align: center;
+    color: #c9c3c3;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin: 24px 0 28px;
+}
+
+/* Form */
+.signin-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.signin-card label {
+    margin-bottom: 9px;
+
+    color: #ffe6b5;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Input Fields */
+.signin-card input {
+    width: 100%;
+    min-height: 48px;
+
+    padding: 13px 15px;
+    margin-bottom: 21px;
+
+    border: 1px solid #55483e;
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.signin-card input::placeholder {
+    color: #aaa2a2;
+}
+
+.signin-card input:hover {
+    border-color: #a77d4a;
+}
+
+.signin-card input:focus {
+    border-color: #ffbf50;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 190, 70, 0.10),
+        0 0 15px rgba(255, 190, 70, 0.12);
+}
+
+/* Primary Buttons */
+.signin-card button {
+    position: relative;
+
+    width: 100%;
+    min-height: 48px;
+
+    padding: 13px;
+    margin-bottom: 13px;
+
+    border: 1px solid #e8b84d;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        120deg,
+        #a81030,
+        #e91e63,
+        #b51238
+    );
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 18px rgba(233, 30, 99, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.signin-card button:hover:not(:disabled) {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        120deg,
+        #c2185b,
+        #ff4081,
+        #c2185b
+    );
+
+    box-shadow:
+        0 8px 25px rgba(233, 30, 99, 0.35),
+        0 0 12px rgba(255, 215, 109, 0.15);
+}
+
+.signin-card button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.signin-card button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Secondary Buttons */
+.signin-card button[type="button"] {
+    border: 1px solid #756247;
+
+    background: linear-gradient(
+        120deg,
+        #383039,
+        #24212a
+    );
+
+    color: #f6e7c9;
+
+    box-shadow: none;
+}
+
+.signin-card button[type="button"]:hover:not(:disabled) {
+    border-color: #e4bb60;
+
+    box-shadow: 0 0 14px rgba(255, 190, 70, 0.16);
+}
+
+/* Divider */
+.signin-card hr {
+    border: none;
+    border-top: 1px solid rgba(220, 174, 72, 0.5);
+
+    margin: 20px -30px;
+}
+
+/* Footer */
+.signin-footer {
+    text-align: center;
+
+    color: #c9c3c3;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+.signin-footer a {
+    color: #ff6685;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.signin-footer a:hover {
+    color: #ffdf91;
+
+    text-shadow: 0 0 10px rgba(255, 215, 120, 0.5);
+
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+
+    .page-wrapper {
+        padding: 0;
+    }
+
+    .signin-page {
+        padding: 24px 14px;
+        background-attachment: scroll;
+    }
+
+    .signin-card {
+        padding: 28px 22px;
+    }
+
+    .signin-card h2 {
+        margin: -28px -22px 0;
+        padding: 23px 12px;
+        font-size: 25px;
+    }
+
+    .signin-card hr {
+        margin: 18px -22px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .signin-card,
+    .signin-card button,
+    .signin-card input,
+    .signin-footer a {
+        transition: none;
+    }
+
+    .signin-card:hover {
+        transform: none;
+    }
+}

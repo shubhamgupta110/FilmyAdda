@@ -1,4 +1,5 @@
 import "../CSS/Navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar({onLinkClick}) {
   return (
@@ -24,22 +25,18 @@ export default function Navbar({onLinkClick}) {
 
         <nav className="nav-menu">
           <ul className="nav-links">
-            <li><a className="nav-link" href="#movies" onClick={(e) => { e.preventDefault(); onLinkClick("Movies"); }}>Movies</a></li>
-            <li><a className="nav-link" href="#theatres" onClick={(e) => { e.preventDefault(); onLinkClick("Theatres"); }}>Theatres</a></li>
-            <li><a className="nav-link" href="#offers" onClick={(e) => { e.preventDefault(); onLinkClick("Offers"); }}>Offers</a></li>
-            <li><a className="nav-link" href="#bookings" onClick={(e) => { e.preventDefault(); onLinkClick("My Bookings"); }}>
-              My bookings
-            </a></li>
-            <li><a className="nav-link" href="#contact" onClick={(e) => { e.preventDefault(); onLinkClick("Contact"); }}>
-              Contact
-            </a></li>
-            <li><a className="nav-link" href="#about" onClick={(e) => { e.preventDefault(); onLinkClick("About"); }}>
-              About
-            </a></li>
+            <li><Link className="nav-link" to ="/Movies" >Movies</Link></li>
+            <li><Link className="nav-link" to ="/Theatres">Theatres</Link></li>
+            <li><Link className="nav-link" to ="/Offers">Offers</Link></li>
+            <li><Link className="nav-link" to ="/">My bookings</Link></li>
+            <li><Link className="nav-link" to ="/Shows">Shows</Link></li>
+            <li><Link className="nav-link" to ="/About">About</Link></li>
+            
           </ul>
-          <a className="btn-signin" href="#signin" onClick={(e) => { e.preventDefault(); onLinkClick("Sign In"); }}>
-            Sign in
-          </a>
+          <Link className="btn-signup" to ="/Signup">            Sign Up
+          </Link>
+           <Link className="btn-signin" to ="/Signin">            Sign In
+          </Link>
         </nav>
       </div>
     </header>

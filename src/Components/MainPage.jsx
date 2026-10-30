@@ -1,6 +1,7 @@
 import Movies from "./Movies.jsx";
 import Theatres from "./Theatres.jsx";
 import Offers from "./Offers.jsx";
+import AppRoutes from "./AppRoutes.jsx";
 function MainPage({currentPage}) {
   return (
     // <main className="main">
@@ -23,14 +24,17 @@ function MainPage({currentPage}) {
     //         <polygon points="27,32 27,48 41,40" fill="#E91E63" />
     //       </svg>
             <>
-          {currentPage === "default" && (<h1>Movies Page</h1>)}
+          {/* {currentPage === "default" && (<h1>Movies Page</h1>)}
           {currentPage === "Movies" && (<Movies/>)}
           {currentPage === "Theatres" && (<Theatres/>)}
           {currentPage === "Offers" && (<Offers/>)}
           {currentPage === "My Bookings" && (<h1>My Bookings Page Under Construction</h1>)}
           {currentPage === "Sign In" && (<h1>Sign In Page Under Construction</h1>)}
           {currentPage === "Contact" && (<h1>Contact Page Under Construction</h1>)}
-          {currentPage === "About" && (<h1>About Page Under Construction</h1>)}
+          {currentPage === "About" && (<h1>About Page Under Construction</h1>)} */}
+            
+          <AppRoutes/>
+
           </>
             );
 }

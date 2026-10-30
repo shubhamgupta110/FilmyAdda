@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --fa-ink: #1a1a2e;
+  --fa-cream: #fff3e0;
+  --fa-magenta: #e91e63;
+  --fa-orange: #ff9800;
+  --fa-light-bg: #f8f9fa;
+  --fa-card-bg: #ffffff;
+  --fa-text-dark: #1a1a2e;
+  --fa-text-light: #6b7280;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.offers-container {
+  font-family: "Poppins", system-ui, sans-serif;
+  padding: 2rem;
+  background: var(--fa-light-bg);
+  flex: 1;
+}
+
+.offers-title {
+  color: var(--fa-text-dark);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.offers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.offer-card {
+  background: var(--fa-card-bg);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.offer-badge {
+  background: var(--fa-magenta);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.offer-info {
+  flex: 1;
+}
+
+.offer-title {
+  color: var(--fa-text-dark);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.offer-description {
+  color: var(--fa-text-light);
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+}
+
+.offer-validity {
+  color: var(--fa-orange);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 0;
+  }
+
+  .offers-container {
+    padding: 1.5rem;
+  }
+
+  .offers-title {
+    font-size: 1.6rem;
+  }
+
+  .offer-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .offer-badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .offers-container {
+    padding: 1rem;
+  }
+
+  .offers-title {
+    font-size: 1.4rem;
+  }
+
+  .offer-card {
+    padding: 1rem;
+  }
+
+  .offer-title {
+    font-size: 1.2rem;
+  }
+}
