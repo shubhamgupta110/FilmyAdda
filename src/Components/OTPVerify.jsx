@@ -29,6 +29,26 @@ const OTPVerify = () => {
         }
     };
 
+
+
+    //OTPDELETE
+    const removeOTP = (e, index) => {
+        if (e.key === "Backspace") {
+
+            if (otp[index] !== "") {
+                const digit = [...otp];
+                digit[index] = "";
+                setOtp(digit);
+            }
+            else if (index > 0) {
+                document.getElementById(`otp${index}`).focus();
+            }
+        }
+    };
+
+
+
+
     const handleVerify = async () => {
         const x = otp.join("");
 
@@ -121,29 +141,30 @@ const OTPVerify = () => {
                             value={data}
                             id={`otp${index + 1}`}
                             onChange={(e) => updateOTP(e, index)}
+                            onKeyDown={(e) => removeOTP(e, index)}
                         />
                     ))
                 }
 
 
 
-    <button
-        type="button"
-        className="verify-btn"
-        onClick={handleVerify}
-        disabled={Timer === 0}
-    >
-        VERIFY OTP
-    </button>
+                <button
+                    type="button"
+                    className="verify-btn"
+                    onClick={handleVerify}
+                    disabled={Timer === 0}
+                >
+                    VERIFY OTP
+                </button>
 
 
-                     <button
-        type="button"
-        className="resend-btn"
-        disabled={Timer > 0}
-    >
-        RESEND OTP
-    </button>
+                <button
+                    type="button"
+                    className="resend-btn"
+                    disabled={Timer > 0}
+                >
+                    RESEND OTP
+                </button>
 
 
             </form>
